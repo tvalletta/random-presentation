@@ -191,7 +191,39 @@ a:focus {
          url('font/junction/junction-webfont.svg#Junction') format('svg');
     font-weight: normal;
     font-style: normal;
+}
 
+@font-face {
+    font-family: 'Overlock';
+    src: url('font/overlock/Overlock-Regular-OTF-webfont.eot');
+    src: url('font/overlock/Overlock-Regular-OTF-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/overlock/Overlock-Regular-OTF-webfont.woff') format('woff'),
+         url('font/overlock/Overlock-Regular-OTF-webfont.ttf') format('truetype'),
+         url('font/overlock/Overlock-Regular-OTF-webfont.svg#Overlock') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Oxygen';
+    src: url('font/oxygen/Oxygen-webfont.eot');
+    src: url('font/oxygen/Oxygen-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/oxygen/Oxygen-webfont.woff') format('woff'),
+         url('font/oxygen/Oxygen-webfont.ttf') format('truetype'),
+         url('font/oxygen/Oxygen-webfont.svg#Oxygen') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('font/raleway/raleway_thin-webfont.eot');
+    src: url('font/raleway/raleway_thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/raleway/raleway_thin-webfont.woff') format('woff'),
+         url('font/raleway/raleway_thin-webfont.ttf') format('truetype'),
+         url('font/raleway/raleway_thin-webfont.svg#Raleway') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 h1 {font-size: 128px; line-height: 128px;}
