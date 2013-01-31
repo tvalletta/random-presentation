@@ -1,0 +1,757 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Single Page Applications</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="author" content="Thomas A. Valletta" />
+        <meta name="author" content="Judson Flamm" />
+        <link href="css/impress.css" rel="stylesheet" />
+        <link href="css/prettify.css" rel="stylesheet" />
+        <script type="text/javascript" src='js/jquery-1.8.2.min.js'></script>
+        <script type="text/javascript" src='js/prettify.js'></script>
+    </head>
+    <body onload='prettyPrint()'>
+		<p class="fallback-message">
+		    Your browser doesn't support impress.js.  Try Chrome or Safari.
+		</p>
+		<div class="help">
+			<h3>Need Help?</h3>
+			<h6>Use the arrow keys move forward and back.</h6>
+		</div>
+		<div id="impress">
+			<div id="title" class="step" data-x="2000" data-y="-200" data-z="-1400" data-rotate-y="-55" data-rotate-y="-10" data-rotate-z="53" data-scale="2">
+			    <h1>SPA</h1>
+			    <h5>Thomas A. Valletta</h4>
+			</div>
+			<div class="step" data-x="0" data-y="0" data-z="0">
+				<h2>Intro</h2>
+			</div>
+			<div class="step" data-x="50" data-y="100" data-z="-100">
+				<h4>Judson Flamm</h4>
+			</div>
+			<div class="step" data-x="50" data-y="200" data-z="-100">
+				<h4>Thomas A. Valletta</h4>
+			</div>
+
+
+			<div class="step" data-x="1200" data-y="1400" data-z="1600"></div>
+
+
+
+			<div class="step" data-x="220" data-y="800" data-z="">
+				<h4>Web Gaming</h4>
+				<h2>Interfaces</h2>
+			</div>
+			<div class="step" data-x="0" data-y="1600" data-z="">
+				
+			</div>
+			<div class="step invisible" data-x="100" data-y="1173" data-z="-800" data-scale=".8" data-focus='archive'>
+				Zip Files!<br>
+
+			</div>
+			<div class="step invisible" data-x="100" data-y="1246" data-z="-800" data-scale=".8" data-focus='camera'>
+				<div style="-webkit-transform: rotateY(30deg);">
+					Tap Into The Camera<br>				
+					<video controls id="basic-stream" autoplay style="-webkit-box-reflect: below 10px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255,255,255,0.5)));"></video>
+				</div>
+			</div>
+			
+			<div class="step invisible" data-x="100" data-y="1246" data-z="-580" data-scale=".8" data-rotate-y="90">
+				<h4>Web Demo:</h4>
+				http://www.chromeexperiments.com/detail/pixelate-yourself/
+			</div>
+
+			<div class="step invisible shade" data-x="-100" data-y="1246" data-z="-580" data-scale=".8" data-rotate-y="90">
+<pre class='prettyprint lang-js' style="font-size: .8em;">
+var video=document.querySelector('#myVideoElem');
+navigator.webkitGetUserMedia({video:true},function(stream){
+	video.src=window.webkitURL.createObjectURL(stream);
+}, alert('Not Supported, or User Denied...'));
+</pre>
+			</div>
+
+			<div class="step invisible" data-x="-300" data-y="1246" data-z="-580" data-scale=".8" data-rotate-y="90">
+				other oresentations...
+				<h3>The Web API</h3>
+				by Tom Valletta & Gabriel Dayley<br>
+				Atlantic I, 3:25p - 4:45p<br>
+			</div>
+
+			<div class="step invisible" data-x="100" data-y="1319" data-z="-800" data-scale=".8" data-focus='canvas'>
+				Advantages of Canvas:
+				<ul>
+					<li>2D / 3D</li>
+					<li>Can Be Interactive</li>
+				</ul>
+			</div>
+
+			<div class="step invisible" data-x="100" data-y="1319" data-z="-580" data-scale=".8" data-rotate-y="90">
+				<h4>Web Demo:</h4>
+				http://www.humblesoftware.com/finance/index
+			</div>
+
+			<div class="step invisible" data-x="100" data-y="1392" data-z="-800" data-scale=".8" data-focus='file'>
+				Process Files:
+				<ul>
+					<li>Read Write Binary</li>
+					<li>Manipulate Images</li>
+					<li>Progress Tracking</li>
+				</ul>
+			</div>
+
+			<div class="step invisible" data-x="10000" data-y="20000" data-z="10000" data-scale=".8" data-focus='canvas'>
+				<h3>File Reading Progress Bar:</h3>
+				<style>
+				  #progress_bar {
+				    margin: 10px 0;
+				    padding: 3px;
+				    border: 1px solid #000;
+				    font-size: 14px;
+				    clear: both;
+				    opacity: 0;
+				    -moz-transition: opacity 1s linear;
+				    -o-transition: opacity 1s linear;
+				    -webkit-transition: opacity 1s linear;
+				  }
+				  #progress_bar.loading {
+				    opacity: 1.0;
+				  }
+				  #progress_bar .percent {
+				    background-color: #99ccff;
+				    height: auto;
+				    width: 0;
+				  }
+				</style>
+
+				Please select a file<input type="file" id="files" name="file" />
+				<!-- <button onclick="abortRead();">Cancel read</button> -->
+				<div id="progress_bar"><div class="percent">0%</div></div>
+
+				<script>
+				  var reader;
+				  var progress = document.querySelector('.percent');
+
+				  function abortRead() {
+				    reader.abort();
+				  }
+
+				  function errorHandler(evt) {
+				    switch(evt.target.error.code) {
+				      case evt.target.error.NOT_FOUND_ERR:
+				        alert('File Not Found!');
+				        break;
+				      case evt.target.error.NOT_READABLE_ERR:
+				        alert('File is not readable');
+				        break;
+				      case evt.target.error.ABORT_ERR:
+				        break; // noop
+				      default:
+				        alert('An error occurred reading this file.');
+				    };
+				  }
+
+				  function updateProgress(evt) {
+				    // evt is an ProgressEvent.
+				    if (evt.lengthComputable) {
+				      var percentLoaded = Math.round((evt.loaded / evt.total) * 100);
+				      // Increase the progress bar length.
+				      if (percentLoaded < 100) {
+				        progress.style.width = percentLoaded + '%';
+				        progress.textContent = percentLoaded + '%';
+				      }
+				    }
+				  }
+
+				  function handleFileSelect(evt) {
+				    // Reset progress indicator on new file selection.
+				    progress.style.width = '0%';
+				    progress.textContent = '0%';
+
+				    reader = new FileReader();
+				    reader.onerror = errorHandler;
+				    reader.onprogress = updateProgress;
+				    reader.onabort = function(e) {
+				      alert('File read cancelled');
+				    };
+				    reader.onloadstart = function(e) {
+				      document.getElementById('progress_bar').className = 'loading';
+				    };
+				    reader.onload = function(e) {
+				      // Ensure that the progress bar displays 100% at the end.
+				      progress.style.width = '100%';
+				      progress.textContent = '100%';
+				      // setTimeout("document.getElementById('progress_bar').className='';", 2000);
+				    }
+
+				    // Read in the image file as a binary string.
+				    reader.readAsBinaryString(evt.target.files[0]);
+				  }
+
+				  document.getElementById('files').addEventListener('change', handleFileSelect, false);
+				</script>
+			</div>
+
+			<div class="step invisible" data-x="100" data-y="1465" data-z="-800" data-scale=".8" data-focus='full'>
+				ZOOM in on any element<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;including Images, and Videos...
+			</div>
+
+			<div class="step invisible" data-x="100" data-y="1465" data-z="-580" data-scale=".8" data-rotate-y="90">
+				<h4>Web Demo:</h4>
+				http://html5-demos.appspot.com/static/fullscreen.html
+			</div>
+
+			<div class="step invisible" data-x="100" data-y="1538" data-z="-800" data-scale=".8" data-focus='gamepad'>
+				<img src="img/PS3_controller.png"/>
+			</div>
+
+			<div class="step invisible" data-x="100" data-y="1611" data-z="-800" data-scale=".8" data-focus='idle'>
+				When the User is Away,<br>
+				&nbsp;&nbsp;&nbsp;The JavaScript will Play...
+			</div>
+
+			<div class="step invisible" data-x="100" data-y="1611" data-z="-580" data-scale=".8" data-rotate-y="90">
+				Syncing Data<br>
+				Turning Off Processor Intensive UI Theatrics
+				Turning On Processor Intensive Tasks
+			</div>
+
+			<div class="step invisible" data-x="-100" data-y="1611" data-z="-580" data-scale=".8" data-rotate-y="90">
+				<h4>Web Demo</h4>
+				http://bit.ly/dtqSkD
+			</div>
+
+			<div class="step invisible" data-x="100" data-y="1684" data-z="-800" data-scale=".8" data-focus='mouse'>
+				Mouse Lock:<br>
+				// Ask the browser to lock the pointer<br>
+				element.requestPointerLock();<br>
+				</br>
+				// Ask the browser to release the pointer<br>
+				document.exitPointerLock();
+			</div>
+
+			<div class="step invisible" data-x="100" data-y="1684" data-z="-580" data-scale=".8" data-rotate-y="90">
+				<h4>Web Demo:</h4>
+				http://www.html5rocks.com/en/tutorials/pointerlock/intro/
+			</div>
+
+			<div class="step invisible" data-x="100" data-y="1757" data-z="-800" data-scale=".8" data-focus='network'>
+				<ul>
+					<li>Online / Offline</li>
+					<li>WiFi / 3G</li>
+				</ul>
+			</div>
+
+			<div class="step invisible" data-x="100" data-y="1757" data-z="-580" data-scale=".8" data-rotate-y="90">
+				<h4>Web Demo:</h4>
+				Network Info API
+			</div>
+
+			<div class="step invisible" data-x="100" data-y="1830" data-z="-800" data-scale=".8" data-focus='peer'>
+				Direct Connections<br>
+				Browser to Browser
+			</div>
+
+			<div class="step invisible" data-x="100" data-y="1903" data-z="-800" data-scale=".8" data-focus='resource'>
+				<h3>Avoid Loosing Resources:</h3>
+				Screen Dim<br>
+				Processor Sleep<br>
+				Wifi Sleep<br>
+			</div>
+
+			<div class="step invisible" data-x="100" data-y="1976" data-z="-800" data-scale=".8" data-focus='udp'>
+				Stream Direct<br>
+				From a Browser, Without a Plugin<br>
+				Better Enables Peer to Peer<br>
+			</div>
+
+			<div class="step invisible" data-x="100" data-y="1976" data-z="-580" data-scale=".8" data-rotate-y="90">
+				Coding Demo of UDP Datagram
+				<h3>The Web API</h3>
+				by Tom Valletta & Gabriel Dayley<br>
+				Atlantic I, 3:25p - 4:45p<br>
+			</div>
+
+			<div class="step invisible" data-x="100" data-y="2049" data-z="-800" data-scale=".8" data-focus='vibration'>
+				<h3>How Easy Is This?</h3>
+				navigator.mozVibrate(1000);
+			</div>
+
+			<div class="step invisible" data-x="100" data-y="2122" data-z="-800" data-scale=".8" data-focus='webgl'>
+				<strong>WebGL:</strong> Low Level / Highly Capable<br>
+				<strong>Canvas:</strong> More Friendly / Less Flexible
+			</div>
+
+			<div class="step invisible" data-x="100" data-y="2122" data-z="-580" data-scale=".8" data-rotate-y="90">
+				<h4>Web Demo</h4>
+				http://www.chromeexperiments.com/detail/storm-tracks-webgl/
+			</div>
+
+			<div class="step invisible" data-x="100" data-y="2195" data-z="-800" data-scale=".8" data-focus='webusb'>
+				<img src="img/usb.png"/>
+			</div>
+
+			<div class="step clarify" data-x="0" data-y="1600" data-z="-800">
+		    	<table cellspacing="4">
+		    		<tbody>
+			    		<tr class='header'>
+			    			<td class='title'>API</td>
+			    			<td></td>
+			    		</tr>
+			    		<tr class='focus' data-focus-id='archive'>
+			    			<td class='title'>Archive</td>
+			    			<td></td>
+			    		</tr>
+			    		<tr class='focus' data-focus-id='camera'>
+			    			<td class='title'>Camera</td>
+			    			<td></td>
+			    		</tr>
+			    		<tr class='focus' data-focus-id='canvas'>
+			    			<td class='title'>Canvas</td>
+			    			<td></td>
+			    		</tr>
+			    		<tr class='focus' data-focus-id='file'>
+			    			<td class='title'>File Handle</td>
+			    			<td></td>
+			    		</tr>
+			    		<tr class='focus' data-focus-id='full'>
+			    			<td class='title'>Full Screen</td>
+			    			<td></td>
+			    		</tr>
+			    		<tr class='focus' data-focus-id='gamepad'>
+			    			<td class='title'>Gamepad API</td>
+			    			<td></td>
+			    		</tr>
+			    		<tr class='focus' data-focus-id='idle'>
+			    			<td class='title'>Idle</td>
+			    			<td></td>
+			    		</tr>
+			    		<tr class='focus' data-focus-id='mouse'>
+			    			<td class='title'>Mouse Lock</td>
+			    			<td></td>
+			    		</tr>
+			    		<tr class='focus' data-focus-id='network'>
+			    			<td class='title'>Network Info</td>
+			    			<td></td>
+			    		</tr>
+			    		<tr class='focus' data-focus-id='peer'>
+			    			<td class='title'>Peer to Peer</td>
+			    			<td></td>
+			    		</tr>
+			    		<tr class='focus' data-focus-id='resource'>
+			    			<td class='title'>Resource Lock</td>
+			    			<td></td>
+			    		</tr>
+			    		<tr class='focus' data-focus-id='udp'>
+			    			<td class='title'>UDP Datagram Socket API</td>
+			    			<td></td>
+			    		</tr>
+			    		<tr class='focus' data-focus-id='vibration'>
+			    			<td class='title'>Vibration</td>
+			    			<td></td>
+			    		</tr>
+			    		<tr class='focus' data-focus-id='webgl'>
+			    			<td class='title'>WebGL</td>
+			    			<td></td>
+			    		</tr>
+			    		<tr class='focus' data-focus-id='webusb'>
+			    			<td class='title'>WebUSB</td>
+			    			<td></td>
+			    		</tr>
+			    	</tbody>
+		    	</table>
+			</div>
+
+<!-- Web Gaming Techniques -->
+
+			<div class="step" data-x="1200" data-y="800" data-z="">
+				<h4>Web Gaming</h4>
+				<h2>Techniques</h2>
+			</div>
+			<div class="step" data-x="1200" data-y="1600" data-z="">
+				
+			</div>
+			<div class="step" data-x="1300" data-y="1173" data-z="-800" data-scale=".8" data-focus='3d'>
+				
+			</div>
+			<div class="step invisible" data-x="1300" data-y="1173" data-z="2000" data-scale=".8" data-rotate-y="-180">
+				<h3>Useful for:</h3>
+				<ul style='padding-left: 40px'>
+					<li>1st Person Shooters</li>
+					<li>Slide Shows</li>
+					<li>Charts &amp; Graphs</li>
+					<li>Family Pedigrees</li>
+				</ul>
+			</div>
+			<div class="step invisible" data-x="1300" data-y="1173" data-z="2500" data-scale=".8" data-rotate-y="-180">
+				<iframe src="http://localhost:3001" width='800px' height='600px' style='z-index: 100'></iframe>
+			</div>
+			<div class="step invisible" data-x="1300" data-y="1173" data-z="3000" data-scale=".8" data-rotate-y="-180">
+<pre class='prettyprint lang-js'>
+-webkit-transform: rotateX(45deg)
+                   rotateY(45deg)		
+                   rotateZ(45deg)		
+                   scale(.75)		
+                   translate3d(50px, 50px 50px)
+</pre>
+			</div>
+			<div class="step" data-x="1300" data-y="1246" data-z="-800" data-scale=".8" data-focus='layering'>
+				
+			</div>
+			<div class="step invisible shade" data-x="1300" data-y="1246" data-z="2000" data-scale=".8" data-rotate-y="-180" data-group="layers">
+<pre style='color: white'>
+. 				      .		          .
+              . 			.		.
+      . 				.		           . 
+          .      .		    	 .          
+		. 			         	.		 . 
+ . 			.		                      .
+       .                       	 .          
+</pre>
+			</div>
+			<div class="step invisible" data-x="1300" data-y="1246" data-z="1950" data-scale=".8" data-rotate-y="-180" data-group="layers">
+				<br/><br/><br/><br/>
+				<div style='background-color: blue; position: relative; left: -13px; top: 20px; width: 845px'><br/><br/><br/></div>
+			</div>
+			<div class="step invisible" data-x="1300" data-y="1246" data-z="1900" data-scale=".8" data-rotate-y="-180" data-group="layers">
+				<img src='img/boat.png' style="position: relative; left: 400px; top: 80px"/>
+			</div>
+			<div class="step invisible" data-x="1300" data-y="1246" data-z="1800" data-scale=".8" data-rotate-y="-95">
+				<h3>Useful for:</h3>
+				<ul style='padding-left: 40px'>
+					<li>Managing Complexity</li>
+					<li>Modularity</li>
+					<li>Creativity</li>
+				</ul>
+			</div>
+			<div class="step" data-x="1300" data-y="1319" data-z="-800" data-scale=".8" data-focus='request'>
+				
+			</div>
+			<div class="step invisible" data-x="1300" data-y="1319" data-z="2000" data-scale=".8" data-rotate-y="-180">
+<pre class='prettyprint lang-js'>
+function mainloop() {
+	var start = +new Date;
+	...
+	var elapsed = +new Date - start;
+	setTimeout(mainloop, 16 - elapsed);
+} 
+mainloop();			
+</pre>
+			</div>
+			<div class="step invisible" data-x="1300" data-y="1319" data-z="2500" data-scale=".8" data-rotate-y="-180">
+<pre class='prettyprint lang-js'>
+window.requestAnimationFrame(
+  function(time) {
+    ...
+  }
+);	
+</pre>
+			</div>
+			<div class="step" data-x="1300" data-y="1392" data-z="-800" data-scale=".8" data-focus='typed'>
+				
+			</div>
+			<div class="step invisible" data-x="1300" data-y="1392" data-z="2000" data-scale=".8" data-rotate-y="-180">
+<pre class='prettyprint lang-js'> 
+while (i) {
+  array.push(i);
+}	
+</pre>
+			</div>
+			<div class="step invisible" data-x="1300" data-y="1392" data-z="2500" data-scale=".8" data-rotate-y="-180">
+<pre class='prettyprint lang-js'> 
+var buffer = new ArrayBuffer(16);
+var int32View = new Int32Array(buffer); 
+for (var i = 0; i &lt; int32View.length; i++) {
+	int32View[i] = i; // [0, 1, 2, 3]
+}
+</pre>
+			</div>
+			<div class="step invisible" data-x="1300" data-y="1392" data-z="3000" data-scale=".8" data-rotate-y="-180">
+				<table>
+					<tbody>
+						<tr>
+							<td>Type</td>
+							<td>Size</td>
+							<td>Equvalent</td>
+						</tr>
+						<tr>
+							<td>Uint8Array</td>
+							<td>1</td>
+							<td>unsigned char</td>
+						</tr>
+						<tr>
+							<td>Int16Array</td>
+							<td>2</td>
+							<td>short</td>
+						</tr>
+						<tr>
+							<td>Uint16Array</td>
+							<td>2</td>
+							<td>unsigned short</td>
+						</tr>
+						<tr>
+							<td>Int32Array</td>
+							<td>4</td>
+							<td>int</td>
+						</tr>
+						<tr>
+							<td>Uint32Array</td>
+							<td>4</td>
+							<td>unsigned int</td>
+						</tr>
+						<tr>
+							<td>Float32Array</td>
+							<td>4</td>
+							<td>float</td>
+						</tr>
+						<tr>
+							<td>Float64Array</td>
+							<td>8</td>
+							<td>double</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="step" data-x="1300" data-y="1465" data-z="-800" data-scale=".8" data-focus='leveraging'>
+				
+			</div>
+			<div class="step invisible" data-x="1300" data-y="1392" data-z="2000" data-scale=".8" data-rotate-y="-180">
+				<h3>Graphics Processing Unit:</h3>
+				<ul style='padding-left: 40px'>
+					<li>Specialized for Graphics</li>
+					<li>Not CPU</li>
+					<li>Runs in a separate "thread"</li>
+				</ul>
+			</div>
+			<div class="step invisible" data-x="1300" data-y="1392" data-z="2500" data-scale=".8" data-rotate-y="-180">
+				<h3>Can be offloaded to GPU*:</h3>
+				<ul style='padding-left: 40px'>
+					<li>WebGL</li>
+					<li>Canvas</li>
+					<li>CSS Transforms</li>
+				</ul><br/>
+				<h4>*Must be implemented by the browser</h4>
+			</div>
+			<div class="step invisible" data-x="1300" data-y="1392" data-z="3000" data-scale=".8" data-rotate-y="-180">
+<pre class='prettyprint lang-js'>
+-webkit-transition: 0.75s;
+-webkit-transform: rotateX(45deg)
+                   rotateY(45deg)		
+                   rotateZ(45deg)		
+                   scale(.75)		
+                   translate3d(50px, 50px 50px)
+</pre>
+			</div>
+			<div class="step" data-x="1300" data-y="1538" data-z="-800" data-scale=".8" data-focus='profiling'>
+				
+			</div>
+			<div class="step invisible center" data-x="1300" data-y="1538" data-z="2000" data-scale=".8" data-rotate-y="-180">
+				<h4>Event Timeline</h4>
+				<img src='img/events.png' width='937px' height='800px'>
+			</div>
+			<div class="step invisible center" data-x="1300" data-y="1538" data-z="2500" data-scale=".8" data-rotate-y="-180">
+				<h4>Frame Timeline</h4>
+				<img src='img/frames.png' width='937px' height='800px'>
+			</div>
+			<div class="step invisible center" data-x="1300" data-y="1538" data-z="3000" data-scale=".8" data-rotate-y="-180">
+				<h4>Memory Timeline</h4>
+				<img src='img/memory.png' width='937px' height='800px'>
+			</div>
+			<div class="step invisible center" data-x="1300" data-y="1538" data-z="3500" data-scale=".8" data-rotate-y="-180">
+				<h4>Profiling</h4>
+				<img src='img/profiles.png' width='937px' height='800px'>
+			</div>
+			<div class="step invisible center" data-x="1300" data-y="1538" data-z="4000" data-scale=".8" data-rotate-y="-180">
+				<h4>Selector Profiles</h4>
+				<img src='img/selector-profiles.png' width='937px' height='800px'>
+			</div>
+			<div class="step clarify" data-x="1200" data-y="1275" data-z="-800">
+		    	<table cellspacing="4">
+		    		<tbody>
+			    		<tr class='header'>
+			    			<td class='title'>Technique</td>
+			    			<td></td>
+			    		</tr>
+			    		<tr class='focus' data-focus-id='3d'>
+			    			<td class='title'>3D</td>
+			    			<td></td>
+			    		</tr>
+			    		<tr class='focus' data-focus-id='layering'>
+			    			<td class='title'>Compositing</td>
+			    			<td></td>
+			    		</tr>
+			    		<tr class='focus' data-focus-id='request'>
+			    			<td class='title'>Request Animation Frame</td>
+			    			<td></td>
+			    		</tr>
+			    		<tr class='focus' data-focus-id='typed'>
+			    			<td class='title'>Typed Arrays</td>
+			    			<td></td>
+			    		</tr>
+			    		<tr class='focus' data-focus-id='leveraging'>
+			    			<td class='title'>Leveraging the GPU</td>
+			    			<td></td>
+			    		</tr>
+			    		<tr class='focus' data-focus-id='profiling'>
+			    			<td class='title'>Profiling</td>
+			    			<td></td>
+			    		</tr>
+			    	</tbody>
+		    	</table>
+			</div>
+
+
+<!-- Web Gaming Mechanics -->
+
+			<div class="step" data-x="2400" data-y="800" data-z="">
+				<h4>Web Gaming</h4>
+				<h2>Mechanics</h2>
+			</div>
+			<div class="step" data-x="2400" data-y="1600" data-z="">
+				
+			</div>
+			<div class="step" data-x="2500" data-y="1173" data-z="-800" data-scale=".8" data-focus='clear'>
+				
+			</div>
+			<div class="step invisible center" data-x="3200" data-y="1173" data-z="-480" data-scale=".8" data-rotate-y="-90">
+				<h4>Primary &amp; Secondary Objectives</h4>
+				<img src='img/objectives.png'>
+			</div>
+			<div class="step" data-x="2500" data-y="1246" data-z="-800" data-scale=".8" data-focus='guided' data-onenter='onGuidedEnter' data-onleave='onGuidedLeave'>
+				
+			</div>
+			<div class="step" data-x="2500" data-y="1319" data-z="-800" data-scale=".8" data-focus='progress'>
+				
+			</div>
+			<div class="step invisible center" data-x="3200" data-y="1319" data-z="-480" data-scale=".8" data-rotate-y="-90">
+				<h3>Linked In</h3>
+				<img src='img/progress.png'>
+			</div>
+			<div class="step" data-x="2500" data-y="1392" data-z="-800" data-scale=".8" data-focus='reward'>
+				
+			</div>
+			<div class="step invisible center" data-x="3200" data-y="1392" data-z="-480" data-scale=".8" data-rotate-y="-90">
+				<h3>Game Summary</h3>
+				<img src='img/summary.png'>
+			</div>
+			<div class="step clarify" data-x="2400" data-y="1205" data-z="-800">
+		    	<table cellspacing="4">
+		    		<tbody>
+			    		<tr class='header'>
+			    			<td class='title'>Mechanic</td>
+			    			<td></td>
+			    		</tr>
+			    		<tr class='focus' data-focus-id='clear'>
+			    			<td class='title'>Clear Goals</td>
+			    			<td></td>
+			    		</tr>
+			    		<tr class='focus' data-focus-id='guided'>
+			    			<td class='title'>Guided Interaction</td>
+			    			<td></td>
+			    		</tr>
+			    		<tr class='focus' data-focus-id='progress'>
+			    			<td class='title'>Progress Indicator</td>
+			    			<td></td>
+			    		</tr>
+			    		<tr class='focus' data-focus-id='reward'>
+			    			<td class='title'>Reward</td>
+			    			<td></td>
+			    		</tr>
+			    	</tbody>
+		    	</table>
+			</div>
+
+<!-- Final Thoughts -->
+
+			<div class="step invisible" data-x="1500" data-y="1500" data-z="-1800" data-rotate-z="-90">
+				<h2>Final thoughts...</h2>
+				<ul>
+				<li>Social connections</li>
+				<h5> &nbsp; &nbsp; Simpler Social Integration using API Mashups<br/>
+					<em> &nbsp; &nbsp; Thursday 1:30 - 3:00 in Atlantic VI</em>
+				</h5>
+				<li>Web Sockets</li>
+				<li>Gamification</li>
+			</div>
+
+
+ 			<div class="step invisible" data-x="-250" data-y="300" data-rotate-x="20" data-rotate-y="-50" data-rotate-z="70" data-scale="1">
+			    <br/><br/><br/><br/><br/>
+			    <h6>Thanks for coming!</h6>
+			    <h6>@tvalletta</h6>
+			    <h6>@judsonflamm</h6>
+			</div>
+		</div>
+    <script type="text/javascript" src="js/impress.js"></script>
+    <script>
+    	var el = document.getElementById("impress");
+    	impress().init();
+
+    	var timer;
+    	var focusList = [];
+    	var $help = $('.help');
+    	var activeGroup;
+
+    	el.addEventListener("impress:stepenter", function (event) {
+    		setTimeout(function() {
+	    		var $evt = $(event.target);
+	    		var focus = $evt.attr('data-focus');
+	    		if (focus) {
+	    			var $target = $('.focus[data-focus-id="' + focus + '"]');
+	    			if ($target[0]) {
+		    			$target.addClass('clarify');
+		    			focusList.push($target);
+	    			}
+	    		}
+	    		var onenter = $evt.attr('data-onenter');
+	    		if (window[onenter]) window[onenter]();
+    		}, 200);
+        }, false);
+
+    	el.addEventListener("impress:stepleave", function (event) {
+    		setTimeout(function() {
+	    		var $evt = $(event.target);
+	    		
+	    		// Group Stuff
+	    		var group = $evt.attr('data-group');
+	    		if (group) {
+		    		if (activeGroup) {
+		    			if (activeGroup === group) {
+		    				$evt.addClass('stay');
+		    			}
+		    			else {
+		    				$('[data-group="' + activeGroup + '"]').removeClass('stay');
+		    			}
+		    		}
+		    		else {
+		    			activeGroup = group;
+		    			$evt.addClass('stay');
+		    		}
+	    		}
+	    		else if (activeGroup) {
+					$('[data-group="' + activeGroup + '"]').removeClass('stay')
+	    		}
+
+	    		for (var i = 0, cnt = focusList.length; i < cnt; i++) {
+	    			focusList[i].removeClass('clarify');
+	    		}
+	    		focusList = [];
+
+	    		var onleave = $evt.attr('data-onleave');
+	    		if (window[onleave]) window[onleave]();
+	    	}, 200);
+        }, false);
+
+    	function onGuidedEnter() {
+    		timer = setTimeout(function() {
+	    		$help.addClass('show');
+    		}, 3000);
+    	}
+    	function onGuidedLeave() {
+    		clearTimeout(timer);
+			$help.removeClass('show');
+    	}
+
+    </script>
+    </body>
+</html>
