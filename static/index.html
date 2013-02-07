@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title>Single Page Applications</title>
+        <title>Random</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="author" content="Thomas A. Valletta" />
         <meta name="author" content="Judson Flamm" />
@@ -19,667 +19,310 @@
 			<h6>Use the arrow keys move forward and back.</h6>
 		</div>
 		<div id="impress">
-			<div id="title" class="step" data-x="2000" data-y="-200" data-z="-1400" data-rotate-y="-55" data-rotate-y="-10" data-rotate-z="53" data-scale="2">
-			    <h1>Randumb</h1>
-			    <h4>Thomas A. Valletta</h4>
+			<div id="pre-title" class="step" data-x="0" data-y="-600" data-z="-100">
+			    <h4>Just random<br/>opinions</h4>
 			</div>
-			<div class="step" data-x="0" data-y="0" data-z="0">
-				<h2>Intro</h2>
-			</div>
-			<div class="step" data-x="50" data-y="100" data-z="-100">
-				<h4>Judson Flamm</h4>
-			</div>
-			<div class="step" data-x="50" data-y="200" data-z="-100">
-				<h4>Thomas A. Valletta</h4>
+			<div id="title" class="step" data-x="0" data-y="-800" data-z="0">
+			    <h1>Take It Or Leave It</h1>
 			</div>
 
 
-			<div class="step" data-x="1200" data-y="1400" data-z="1600"></div>
-
-
-
-			<div class="step" data-x="220" data-y="800" data-z="">
-				<h4>Web Gaming</h4>
-				<h2>Interfaces</h2>
+			<!-- Outline -->
+			<div id="outline" class="step" data-x="0" data-y="-50" data-z="0">
+				<h1>Outline</h1>
 			</div>
-			<div class="step" data-x="0" data-y="1600" data-z="">
+			<div class="step" data-x="50" data-y="80" data-z="-100">
+				<h4>Mobile</h4>
+			</div>
+			<div class="step" data-x="50" data-y="160" data-z="-100">
+				<h4>Web</h4>
+			</div>
+			<div class="step" data-x="50" data-y="240" data-z="-100">
+				<h4>Architecture</h4>
+			</div>
+			<div class="step" data-x="50" data-y="320" data-z="-100">
+				<h4>Culture</h4>
+			</div>
+			<div class="step" data-x="50" data-y="400" data-z="-100">
+				<h4>FamilySearch</h4>
+			</div>
+
+
+			<div id="mobile" class="step" data-x="1000" data-y="-50" data-z="0">
+				<h1>Mobile</h1>
+			</div>
+			<!-- 
 				
-			</div>
-			<div class="step invisible" data-x="100" data-y="1173" data-z="-800" data-scale=".8" data-focus='archive'>
-				Zip Files!<br>
-
-			</div>
-			<div class="step invisible" data-x="100" data-y="1246" data-z="-800" data-scale=".8" data-focus='camera'>
-				<div style="-webkit-transform: rotateY(30deg);">
-					Tap Into The Camera<br>				
-					<video controls id="basic-stream" autoplay style="-webkit-box-reflect: below 10px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255,255,255,0.5)));"></video>
-				</div>
-			</div>
-			
-			<div class="step invisible" data-x="100" data-y="1246" data-z="-580" data-scale=".8" data-rotate-y="90">
-				<h4>Web Demo:</h4>
-				http://www.chromeexperiments.com/detail/pixelate-yourself/
-			</div>
-
-			<div class="step invisible shade" data-x="-100" data-y="1246" data-z="-580" data-scale=".8" data-rotate-y="90">
-<pre class='prettyprint lang-js' style="font-size: .8em;">
-var video=document.querySelector('#myVideoElem');
-navigator.webkitGetUserMedia({video:true},function(stream){
-	video.src=window.webkitURL.createObjectURL(stream);
-}, alert('Not Supported, or User Denied...'));
-</pre>
-			</div>
-
-			<div class="step invisible" data-x="-300" data-y="1246" data-z="-580" data-scale=".8" data-rotate-y="90">
-				other oresentations...
-				<h3>The Web API</h3>
-				by Tom Valletta & Gabriel Dayley<br>
-				Atlantic I, 3:25p - 4:45p<br>
-			</div>
-
-			<div class="step invisible" data-x="100" data-y="1319" data-z="-800" data-scale=".8" data-focus='canvas'>
-				Advantages of Canvas:
-				<ul>
-					<li>2D / 3D</li>
-					<li>Can Be Interactive</li>
-				</ul>
-			</div>
-
-			<div class="step invisible" data-x="100" data-y="1319" data-z="-580" data-scale=".8" data-rotate-y="90">
-				<h4>Web Demo:</h4>
-				http://www.humblesoftware.com/finance/index
-			</div>
-
-			<div class="step invisible" data-x="100" data-y="1392" data-z="-800" data-scale=".8" data-focus='file'>
-				Process Files:
-				<ul>
-					<li>Read Write Binary</li>
-					<li>Manipulate Images</li>
-					<li>Progress Tracking</li>
-				</ul>
-			</div>
-
-			<div class="step invisible" data-x="10000" data-y="20000" data-z="10000" data-scale=".8" data-focus='canvas'>
-				<h3>File Reading Progress Bar:</h3>
-				<style>
-				  #progress_bar {
-				    margin: 10px 0;
-				    padding: 3px;
-				    border: 1px solid #000;
-				    font-size: 14px;
-				    clear: both;
-				    opacity: 0;
-				    -moz-transition: opacity 1s linear;
-				    -o-transition: opacity 1s linear;
-				    -webkit-transition: opacity 1s linear;
-				  }
-				  #progress_bar.loading {
-				    opacity: 1.0;
-				  }
-				  #progress_bar .percent {
-				    background-color: #99ccff;
-				    height: auto;
-				    width: 0;
-				  }
-				</style>
-
-				Please select a file<input type="file" id="files" name="file" />
-				<!-- <button onclick="abortRead();">Cancel read</button> -->
-				<div id="progress_bar"><div class="percent">0%</div></div>
-
-				<script>
-				  var reader;
-				  var progress = document.querySelector('.percent');
-
-				  function abortRead() {
-				    reader.abort();
-				  }
-
-				  function errorHandler(evt) {
-				    switch(evt.target.error.code) {
-				      case evt.target.error.NOT_FOUND_ERR:
-				        alert('File Not Found!');
-				        break;
-				      case evt.target.error.NOT_READABLE_ERR:
-				        alert('File is not readable');
-				        break;
-				      case evt.target.error.ABORT_ERR:
-				        break; // noop
-				      default:
-				        alert('An error occurred reading this file.');
-				    };
-				  }
-
-				  function updateProgress(evt) {
-				    // evt is an ProgressEvent.
-				    if (evt.lengthComputable) {
-				      var percentLoaded = Math.round((evt.loaded / evt.total) * 100);
-				      // Increase the progress bar length.
-				      if (percentLoaded < 100) {
-				        progress.style.width = percentLoaded + '%';
-				        progress.textContent = percentLoaded + '%';
-				      }
-				    }
-				  }
-
-				  function handleFileSelect(evt) {
-				    // Reset progress indicator on new file selection.
-				    progress.style.width = '0%';
-				    progress.textContent = '0%';
-
-				    reader = new FileReader();
-				    reader.onerror = errorHandler;
-				    reader.onprogress = updateProgress;
-				    reader.onabort = function(e) {
-				      alert('File read cancelled');
-				    };
-				    reader.onloadstart = function(e) {
-				      document.getElementById('progress_bar').className = 'loading';
-				    };
-				    reader.onload = function(e) {
-				      // Ensure that the progress bar displays 100% at the end.
-				      progress.style.width = '100%';
-				      progress.textContent = '100%';
-				      // setTimeout("document.getElementById('progress_bar').className='';", 2000);
-				    }
-
-				    // Read in the image file as a binary string.
-				    reader.readAsBinaryString(evt.target.files[0]);
-				  }
-
-				  document.getElementById('files').addEventListener('change', handleFileSelect, false);
-				</script>
-			</div>
-
-			<div class="step invisible" data-x="100" data-y="1465" data-z="-800" data-scale=".8" data-focus='full'>
-				ZOOM in on any element<br>
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;including Images, and Videos...
-			</div>
-
-			<div class="step invisible" data-x="100" data-y="1465" data-z="-580" data-scale=".8" data-rotate-y="90">
-				<h4>Web Demo:</h4>
-				http://html5-demos.appspot.com/static/fullscreen.html
-			</div>
-
-			<div class="step invisible" data-x="100" data-y="1538" data-z="-800" data-scale=".8" data-focus='gamepad'>
-				<img src="img/PS3_controller.png"/>
-			</div>
-
-			<div class="step invisible" data-x="100" data-y="1611" data-z="-800" data-scale=".8" data-focus='idle'>
-				When the User is Away,<br>
-				&nbsp;&nbsp;&nbsp;The JavaScript will Play...
-			</div>
-
-			<div class="step invisible" data-x="100" data-y="1611" data-z="-580" data-scale=".8" data-rotate-y="90">
-				Syncing Data<br>
-				Turning Off Processor Intensive UI Theatrics
-				Turning On Processor Intensive Tasks
-			</div>
-
-			<div class="step invisible" data-x="-100" data-y="1611" data-z="-580" data-scale=".8" data-rotate-y="90">
-				<h4>Web Demo</h4>
-				http://bit.ly/dtqSkD
-			</div>
-
-			<div class="step invisible" data-x="100" data-y="1684" data-z="-800" data-scale=".8" data-focus='mouse'>
-				Mouse Lock:<br>
-				// Ask the browser to lock the pointer<br>
-				element.requestPointerLock();<br>
-				</br>
-				// Ask the browser to release the pointer<br>
-				document.exitPointerLock();
-			</div>
-
-			<div class="step invisible" data-x="100" data-y="1684" data-z="-580" data-scale=".8" data-rotate-y="90">
-				<h4>Web Demo:</h4>
-				http://www.html5rocks.com/en/tutorials/pointerlock/intro/
-			</div>
-
-			<div class="step invisible" data-x="100" data-y="1757" data-z="-800" data-scale=".8" data-focus='network'>
-				<ul>
-					<li>Online / Offline</li>
-					<li>WiFi / 3G</li>
-				</ul>
-			</div>
-
-			<div class="step invisible" data-x="100" data-y="1757" data-z="-580" data-scale=".8" data-rotate-y="90">
-				<h4>Web Demo:</h4>
-				Network Info API
-			</div>
-
-			<div class="step invisible" data-x="100" data-y="1830" data-z="-800" data-scale=".8" data-focus='peer'>
-				Direct Connections<br>
-				Browser to Browser
-			</div>
-
-			<div class="step invisible" data-x="100" data-y="1903" data-z="-800" data-scale=".8" data-focus='resource'>
-				<h3>Avoid Loosing Resources:</h3>
-				Screen Dim<br>
-				Processor Sleep<br>
-				Wifi Sleep<br>
-			</div>
-
-			<div class="step invisible" data-x="100" data-y="1976" data-z="-800" data-scale=".8" data-focus='udp'>
-				Stream Direct<br>
-				From a Browser, Without a Plugin<br>
-				Better Enables Peer to Peer<br>
-			</div>
-
-			<div class="step invisible" data-x="100" data-y="1976" data-z="-580" data-scale=".8" data-rotate-y="90">
-				Coding Demo of UDP Datagram
-				<h3>The Web API</h3>
-				by Tom Valletta & Gabriel Dayley<br>
-				Atlantic I, 3:25p - 4:45p<br>
-			</div>
-
-			<div class="step invisible" data-x="100" data-y="2049" data-z="-800" data-scale=".8" data-focus='vibration'>
-				<h3>How Easy Is This?</h3>
-				navigator.mozVibrate(1000);
-			</div>
-
-			<div class="step invisible" data-x="100" data-y="2122" data-z="-800" data-scale=".8" data-focus='webgl'>
-				<strong>WebGL:</strong> Low Level / Highly Capable<br>
-				<strong>Canvas:</strong> More Friendly / Less Flexible
-			</div>
-
-			<div class="step invisible" data-x="100" data-y="2122" data-z="-580" data-scale=".8" data-rotate-y="90">
-				<h4>Web Demo</h4>
-				http://www.chromeexperiments.com/detail/storm-tracks-webgl/
-			</div>
-
-			<div class="step invisible" data-x="100" data-y="2195" data-z="-800" data-scale=".8" data-focus='webusb'>
-				<img src="img/usb.png"/>
-			</div>
-
-			<div class="step clarify" data-x="0" data-y="1600" data-z="-800">
-		    	<table cellspacing="4">
-		    		<tbody>
-			    		<tr class='header'>
-			    			<td class='title'>API</td>
-			    			<td></td>
-			    		</tr>
-			    		<tr class='focus' data-focus-id='archive'>
-			    			<td class='title'>Archive</td>
-			    			<td></td>
-			    		</tr>
-			    		<tr class='focus' data-focus-id='camera'>
-			    			<td class='title'>Camera</td>
-			    			<td></td>
-			    		</tr>
-			    		<tr class='focus' data-focus-id='canvas'>
-			    			<td class='title'>Canvas</td>
-			    			<td></td>
-			    		</tr>
-			    		<tr class='focus' data-focus-id='file'>
-			    			<td class='title'>File Handle</td>
-			    			<td></td>
-			    		</tr>
-			    		<tr class='focus' data-focus-id='full'>
-			    			<td class='title'>Full Screen</td>
-			    			<td></td>
-			    		</tr>
-			    		<tr class='focus' data-focus-id='gamepad'>
-			    			<td class='title'>Gamepad API</td>
-			    			<td></td>
-			    		</tr>
-			    		<tr class='focus' data-focus-id='idle'>
-			    			<td class='title'>Idle</td>
-			    			<td></td>
-			    		</tr>
-			    		<tr class='focus' data-focus-id='mouse'>
-			    			<td class='title'>Mouse Lock</td>
-			    			<td></td>
-			    		</tr>
-			    		<tr class='focus' data-focus-id='network'>
-			    			<td class='title'>Network Info</td>
-			    			<td></td>
-			    		</tr>
-			    		<tr class='focus' data-focus-id='peer'>
-			    			<td class='title'>Peer to Peer</td>
-			    			<td></td>
-			    		</tr>
-			    		<tr class='focus' data-focus-id='resource'>
-			    			<td class='title'>Resource Lock</td>
-			    			<td></td>
-			    		</tr>
-			    		<tr class='focus' data-focus-id='udp'>
-			    			<td class='title'>UDP Datagram Socket API</td>
-			    			<td></td>
-			    		</tr>
-			    		<tr class='focus' data-focus-id='vibration'>
-			    			<td class='title'>Vibration</td>
-			    			<td></td>
-			    		</tr>
-			    		<tr class='focus' data-focus-id='webgl'>
-			    			<td class='title'>WebGL</td>
-			    			<td></td>
-			    		</tr>
-			    		<tr class='focus' data-focus-id='webusb'>
-			    			<td class='title'>WebUSB</td>
-			    			<td></td>
-			    		</tr>
-			    	</tbody>
-		    	</table>
-			</div>
-
-<!-- Web Gaming Techniques -->
-
-			<div class="step" data-x="1200" data-y="800" data-z="">
-				<h4>Web Gaming</h4>
-				<h2>Techniques</h2>
-			</div>
-			<div class="step" data-x="1200" data-y="1600" data-z="">
 				
+				Fast modern browsers
+					average lifespan 1.1 years
+					no ie678
+					awesome device sensor access
+					always with you
+
+				Truth prevails
+					iPhone released in 2007 
+						created the new era of mobile
+						success was based on 
+							slick touch ui
+							useful browser (there were no apps)
+							Apple marketing
+						Steve's plan was for browser based apps
+					Palm WebOS had 
+						10% market share
+						13% of mobile web traffic
+					At the same time windows phone had
+						6% market share
+						2% of mobile web traffic
+					Windows 7 phone released
+						with an IE6 based browser
+						scored 24 out of 500 on html5test.com
+						Playstation 3 NetFront Browser gets a 68
+						Market share peaked at 1.7%
+					Windows 8 phone is at 2.2%
+			-->
+			<div class="step invisible" data-x="1050" data-y="80" data-z="-100">
+				<h4>might be catching on</h4>
 			</div>
-			<div class="step" data-x="1300" data-y="1173" data-z="-800" data-scale=".8" data-focus='3d'>
-				
+			<div class="step invisible" data-x="1050" data-y="80" data-z="600">
+				<img src="img/shipments.jpg" class="img"/>
 			</div>
-			<div class="step invisible" data-x="1300" data-y="1173" data-z="2000" data-scale=".8" data-rotate-y="-180">
-				<h3>Useful for:</h3>
-				<ul style='padding-left: 40px'>
-					<li>1st Person Shooters</li>
-					<li>Slide Shows</li>
-					<li>Charts &amp; Graphs</li>
-					<li>Family Pedigrees</li>
-				</ul>
+			<div class="step invisible" data-x="1050" data-y="80" data-z="600">
+				<img src="img/india.jpg" class="img"/>
 			</div>
-			<div class="step invisible" data-x="1300" data-y="1173" data-z="2500" data-scale=".8" data-rotate-y="-180">
-				<iframe src="http://localhost:3001" width='800px' height='600px' style='z-index: 100'></iframe>
+			<div class="step invisible center" data-x="780" data-y="150" data-z="-100">
+				<h6>1.1 yr</h6>
+				<h4>Average device life</h4>
 			</div>
-			<div class="step invisible" data-x="1300" data-y="1173" data-z="3000" data-scale=".8" data-rotate-y="-180">
-<pre class='prettyprint lang-js'>
--webkit-transform: rotateX(45deg)
-                   rotateY(45deg)		
-                   rotateZ(45deg)		
-                   scale(.75)		
-                   translate3d(50px, 50px 50px)
-</pre>
+			<div class="step invisible center" data-x="780" data-y="150" data-z="-100">
+				<h6>Sensors</h6>
+				<h4>for everything</h4>
 			</div>
-			<div class="step" data-x="1300" data-y="1246" data-z="-800" data-scale=".8" data-focus='layering'>
-				
+			<div class="step invisible center" data-x="780" data-y="150" data-z="-100">
+				<h6>Always</h6>
+				<h4>on, present, *connected</h4>
 			</div>
-			<div class="step invisible shade" data-x="1300" data-y="1246" data-z="2000" data-scale=".8" data-rotate-y="-180" data-group="layers">
-<pre style='color: white'>
-. 				      .		          .
-              . 			.		.
-      . 				.		           . 
-          .      .		    	 .          
-		. 			         	.		 . 
- . 			.		                      .
-       .                       	 .          
-</pre>
+			<div class="step invisible center" data-x="780" data-y="150" data-z="-100">
+				<h6>IE 6</h6>
+				<h4>never happened</h4>
 			</div>
-			<div class="step invisible" data-x="1300" data-y="1246" data-z="1950" data-scale=".8" data-rotate-y="-180" data-group="layers">
-				<br/><br/><br/><br/>
-				<div style='background-color: blue; position: relative; left: -13px; top: 20px; width: 845px'><br/><br/><br/></div>
+
+			<div class="step invisible" data-x="1050" data-y="80" data-z="-100" data-group="righteous">
+				<h4>Based on righteous principles</h4>
 			</div>
-			<div class="step invisible" data-x="1300" data-y="1246" data-z="1900" data-scale=".8" data-rotate-y="-180" data-group="layers">
-				<img src='img/boat.png' style="position: relative; left: 400px; top: 80px"/>
+			<div class="step invisible" data-x="1100" data-y="160" data-z="-100" data-group="righteous">
+				<h4>2007 iPhone</h4>
 			</div>
-			<div class="step invisible" data-x="1300" data-y="1246" data-z="1800" data-scale=".8" data-rotate-y="-95">
-				<h3>Useful for:</h3>
-				<ul style='padding-left: 40px'>
-					<li>Managing Complexity</li>
-					<li>Modularity</li>
-					<li>Creativity</li>
-				</ul>
+			<div class="step invisible" data-x="1150" data-y="240" data-z="-100" data-group="righteous">
+				<h4>neo-mobile era</h4>
 			</div>
-			<div class="step" data-x="1300" data-y="1319" data-z="-800" data-scale=".8" data-focus='request'>
-				
+			<div class="step invisible" data-x="1150" data-y="320" data-z="-100" data-group="righteous">
+				<h4>success was based on:</h4>
 			</div>
-			<div class="step invisible" data-x="1300" data-y="1319" data-z="2000" data-scale=".8" data-rotate-y="-180">
-<pre class='prettyprint lang-js'>
-function mainloop() {
-	var start = +new Date;
-	...
-	var elapsed = +new Date - start;
-	setTimeout(mainloop, 16 - elapsed);
-} 
-mainloop();			
-</pre>
+			<div class="step invisible" data-x="1200" data-y="400" data-z="-100" data-group="righteous">
+				<h4>Smooth touch UI</h4>
 			</div>
-			<div class="step invisible" data-x="1300" data-y="1319" data-z="2500" data-scale=".8" data-rotate-y="-180">
-<pre class='prettyprint lang-js'>
-window.requestAnimationFrame(
-  function(time) {
-    ...
-  }
-);	
-</pre>
+			<div class="step invisible" data-x="1200" data-y="480" data-z="-100" data-group="righteous">
+				<h4>Useful web browser</h4>
 			</div>
-			<div class="step" data-x="1300" data-y="1392" data-z="-800" data-scale=".8" data-focus='typed'>
-				
+			<div class="step invisible" data-x="1200" data-y="560" data-z="-100" data-group="righteous">
+				<h4>Apple marketing</h4>
 			</div>
-			<div class="step invisible" data-x="1300" data-y="1392" data-z="2000" data-scale=".8" data-rotate-y="-180">
-<pre class='prettyprint lang-js'> 
-while (i) {
-  array.push(i);
-}	
-</pre>
+			<div class="step invisible" data-x="1100" data-y="640" data-z="-100" data-group="righteous">
+				<h4>2009 Palm WebOS</h4>
 			</div>
-			<div class="step invisible" data-x="1300" data-y="1392" data-z="2500" data-scale=".8" data-rotate-y="-180">
-<pre class='prettyprint lang-js'> 
-var buffer = new ArrayBuffer(16);
-var int32View = new Int32Array(buffer); 
-for (var i = 0; i &lt; int32View.length; i++) {
-	int32View[i] = i; // [0, 1, 2, 3]
-}
-</pre>
+			<div class="step invisible" data-x="1150" data-y="720" data-z="-100" data-group="righteous">
+				<h4>Browser just behind Safari</h4>
 			</div>
-			<div class="step invisible" data-x="1300" data-y="1392" data-z="3000" data-scale=".8" data-rotate-y="-180">
-				<table>
-					<tbody>
-						<tr>
-							<td>Type</td>
-							<td>Size</td>
-							<td>Equvalent</td>
-						</tr>
-						<tr>
-							<td>Uint8Array</td>
-							<td>1</td>
-							<td>unsigned char</td>
-						</tr>
-						<tr>
-							<td>Int16Array</td>
-							<td>2</td>
-							<td>short</td>
-						</tr>
-						<tr>
-							<td>Uint16Array</td>
-							<td>2</td>
-							<td>unsigned short</td>
-						</tr>
-						<tr>
-							<td>Int32Array</td>
-							<td>4</td>
-							<td>int</td>
-						</tr>
-						<tr>
-							<td>Uint32Array</td>
-							<td>4</td>
-							<td>unsigned int</td>
-						</tr>
-						<tr>
-							<td>Float32Array</td>
-							<td>4</td>
-							<td>float</td>
-						</tr>
-						<tr>
-							<td>Float64Array</td>
-							<td>8</td>
-							<td>double</td>
-						</tr>
-					</tbody>
-				</table>
+			<div class="step invisible" data-x="1150" data-y="800" data-z="-100" data-group="righteous">
+				<h4>10% market share</h4>
 			</div>
-			<div class="step" data-x="1300" data-y="1465" data-z="-800" data-scale=".8" data-focus='leveraging'>
-				
+			<div class="step invisible" data-x="1150" data-y="880" data-z="-100" data-group="righteous">
+				<h4>13% of mobile traffic</h4>
 			</div>
-			<div class="step invisible" data-x="1300" data-y="1392" data-z="2000" data-scale=".8" data-rotate-y="-180">
-				<h3>Graphics Processing Unit:</h3>
-				<ul style='padding-left: 40px'>
-					<li>Specialized for Graphics</li>
-					<li>Not CPU</li>
-					<li>Runs in a separate "thread"</li>
-				</ul>
+			<div class="step invisible" data-x="1100" data-y="960" data-z="-100" data-group="righteous">
+				<h4>2010 Windows 7 Phone</h4>
 			</div>
-			<div class="step invisible" data-x="1300" data-y="1392" data-z="2500" data-scale=".8" data-rotate-y="-180">
-				<h3>Can be offloaded to GPU*:</h3>
-				<ul style='padding-left: 40px'>
-					<li>WebGL</li>
-					<li>Canvas</li>
-					<li>CSS Transforms</li>
-				</ul><br/>
-				<h4>*Must be implemented by the browser</h4>
+			<div class="step invisible" data-x="1150" data-y="1040" data-z="-100" data-group="righteous">
+				<h4>Browser scored 24 out of 500</h4>
 			</div>
-			<div class="step invisible" data-x="1300" data-y="1392" data-z="3000" data-scale=".8" data-rotate-y="-180">
-<pre class='prettyprint lang-js'>
--webkit-transition: 0.75s;
--webkit-transform: rotateX(45deg)
-                   rotateY(45deg)		
-                   rotateZ(45deg)		
-                   scale(.75)		
-                   translate3d(50px, 50px 50px)
-</pre>
+			<div class="step invisible" data-x="1200" data-y="1120" data-z="-100" data-group="righteous">
+				<h4>Based on IE 6</h4>
 			</div>
-			<div class="step" data-x="1300" data-y="1538" data-z="-800" data-scale=".8" data-focus='profiling'>
-				
+			<div class="step invisible" data-x="1200" data-y="1200" data-z="-100" data-group="righteous">
+				<h4>Playstation 3 NetFront gets 68</h4>
 			</div>
-			<div class="step invisible center" data-x="1300" data-y="1538" data-z="2000" data-scale=".8" data-rotate-y="-180">
-				<h4>Event Timeline</h4>
-				<img src='img/events.png' width='937px' height='800px'>
+			<div class="step invisible" data-x="1150" data-y="1280" data-z="-100" data-group="righteous">
+				<h4>1.7% market share</h4>
 			</div>
-			<div class="step invisible center" data-x="1300" data-y="1538" data-z="2500" data-scale=".8" data-rotate-y="-180">
-				<h4>Frame Timeline</h4>
-				<img src='img/frames.png' width='937px' height='800px'>
+			<div class="step invisible" data-x="1150" data-y="1360" data-z="-100" data-group="righteous">
+				<h4>Microsoft: 6% total mobile market</h4>
 			</div>
-			<div class="step invisible center" data-x="1300" data-y="1538" data-z="3000" data-scale=".8" data-rotate-y="-180">
-				<h4>Memory Timeline</h4>
-				<img src='img/memory.png' width='937px' height='800px'>
+			<div class="step invisible" data-x="1150" data-y="1440" data-z="-100" data-group="righteous">
+				<h4>Microsoft: 2% of mobile web traffic</h4>
 			</div>
-			<div class="step invisible center" data-x="1300" data-y="1538" data-z="3500" data-scale=".8" data-rotate-y="-180">
-				<h4>Profiling</h4>
-				<img src='img/profiles.png' width='937px' height='800px'>
+			<div class="step invisible" data-x="1100" data-y="1520" data-z="-100" data-group="righteous">
+				<h4>2012 Windows 8 Phone</h4>
 			</div>
-			<div class="step invisible center" data-x="1300" data-y="1538" data-z="4000" data-scale=".8" data-rotate-y="-180">
-				<h4>Selector Profiles</h4>
-				<img src='img/selector-profiles.png' width='937px' height='800px'>
+			<div class="step invisible" data-x="1150" data-y="1600" data-z="-100" data-group="righteous">
+				<h4>Browser still 66 points behind</h4>
 			</div>
-			<div class="step clarify" data-x="1200" data-y="1275" data-z="-800">
-		    	<table cellspacing="4">
-		    		<tbody>
-			    		<tr class='header'>
-			    			<td class='title'>Technique</td>
-			    			<td></td>
-			    		</tr>
-			    		<tr class='focus' data-focus-id='3d'>
-			    			<td class='title'>3D</td>
-			    			<td></td>
-			    		</tr>
-			    		<tr class='focus' data-focus-id='layering'>
-			    			<td class='title'>Compositing</td>
-			    			<td></td>
-			    		</tr>
-			    		<tr class='focus' data-focus-id='request'>
-			    			<td class='title'>Request Animation Frame</td>
-			    			<td></td>
-			    		</tr>
-			    		<tr class='focus' data-focus-id='typed'>
-			    			<td class='title'>Typed Arrays</td>
-			    			<td></td>
-			    		</tr>
-			    		<tr class='focus' data-focus-id='leveraging'>
-			    			<td class='title'>Leveraging the GPU</td>
-			    			<td></td>
-			    		</tr>
-			    		<tr class='focus' data-focus-id='profiling'>
-			    			<td class='title'>Profiling</td>
-			    			<td></td>
-			    		</tr>
-			    	</tbody>
-		    	</table>
+			<div class="step invisible" data-x="1150" data-y="1680" data-z="-100" data-group="righteous">
+				<h4>2.2% market share</h4>
+			</div>
+			<div class="step invisible" data-x="1050" data-y="1760" data-z="-100" data-group="righteous">
+				<h4>Justice Prevails</h4>
+			</div>
+			<div class="step invisible" data-x="1050" data-y="1760" data-z="600">
+				<img src="img/chart.svg" class="img"/>
 			</div>
 
 
-<!-- Web Gaming Mechanics -->
+			<!-- Talk about why the web is awesome, why is is like no other platform on earth, why is has an awesome and open culture.
+				Nobody owns the web
+				It is free to everyone
+				Microsoft tried to destroy it and failed
+				Al Gore had nothing to do with it
 
-			<div class="step" data-x="2400" data-y="800" data-z="">
-				<h4>Web Gaming</h4>
-				<h2>Mechanics</h2>
+				It has 
+					unparralleled reach
+					unfiltered speech
+
+				newegg.com averages 3-5 times more traffic than nbc.com
+
+				dev tools are easy and free
+			-->
+			<div id="web" class="step" data-x="2000" data-y="-50" data-z="0">
+				<h1>Web</h1>
 			</div>
-			<div class="step" data-x="2400" data-y="1600" data-z="">
-				
+			<div class="step invisible" data-x="2050" data-y="80" data-z="-100" data-group="awesome">
+				<h4>The web is unique</h4>
 			</div>
-			<div class="step" data-x="2500" data-y="1173" data-z="-800" data-scale=".8" data-focus='clear'>
-				
+			<div class="step invisible" data-x="2100" data-y="160" data-z="-100" data-group="awesome">
+				<h4>Runs on any platform</h4>
 			</div>
-			<div class="step invisible center" data-x="3200" data-y="1173" data-z="-480" data-scale=".8" data-rotate-y="-90">
-				<h4>Primary &amp; Secondary Objectives</h4>
-				<img src='img/objectives.png'>
+			<div class="step invisible" data-x="2100" data-y="240" data-z="-100" data-group="awesome">
+				<h4>Free, open, and unowned</h4>
 			</div>
-			<div class="step" data-x="2500" data-y="1246" data-z="-800" data-scale=".8" data-focus='guided' data-onenter='onGuidedEnter' data-onleave='onGuidedLeave'>
-				
+			<div class="step invisible" data-x="2150" data-y="320" data-z="-100" data-group="awesome">
+				<h4>Despite Microsoft's best efforts</h4>
 			</div>
-			<div class="step" data-x="2500" data-y="1319" data-z="-800" data-scale=".8" data-focus='progress'>
-				
+			<div class="step invisible" data-x="2150" data-y="400" data-z="-100" data-group="awesome">
+				<h4>traffic: newegg.com > 4(nbc.com)</h4>
 			</div>
-			<div class="step invisible center" data-x="3200" data-y="1319" data-z="-480" data-scale=".8" data-rotate-y="-90">
-				<h3>Linked In</h3>
-				<img src='img/progress.png'>
+			<div class="step invisible" data-x="2100" data-y="480" data-z="-100" data-group="awesome">
+				<h4>Unparalleled reach</h4>
 			</div>
-			<div class="step" data-x="2500" data-y="1392" data-z="-800" data-scale=".8" data-focus='reward'>
-				
+			<div class="step invisible" data-x="2100" data-y="480" data-z="600">
+				<img src="img/usage.png" class="img"/>
 			</div>
-			<div class="step invisible center" data-x="3200" data-y="1392" data-z="-480" data-scale=".8" data-rotate-y="-90">
-				<h3>Game Summary</h3>
-				<img src='img/summary.png'>
-			</div>
-			<div class="step clarify" data-x="2400" data-y="1205" data-z="-800">
-		    	<table cellspacing="4">
-		    		<tbody>
-			    		<tr class='header'>
-			    			<td class='title'>Mechanic</td>
-			    			<td></td>
-			    		</tr>
-			    		<tr class='focus' data-focus-id='clear'>
-			    			<td class='title'>Clear Goals</td>
-			    			<td></td>
-			    		</tr>
-			    		<tr class='focus' data-focus-id='guided'>
-			    			<td class='title'>Guided Interaction</td>
-			    			<td></td>
-			    		</tr>
-			    		<tr class='focus' data-focus-id='progress'>
-			    			<td class='title'>Progress Indicator</td>
-			    			<td></td>
-			    		</tr>
-			    		<tr class='focus' data-focus-id='reward'>
-			    			<td class='title'>Reward</td>
-			    			<td></td>
-			    		</tr>
-			    	</tbody>
-		    	</table>
+			<div class="step invisible" data-x="2050" data-y="240" data-z="-100">
+				<h5>“We see more people accessing Facebook on the mobile web than from our top native apps combined, so we know the mobile web is important for reach.”</h5>
+				<h4><br/> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &mdash;Facebook Developer Blog</h4>
 			</div>
 
-<!-- Final Thoughts -->
+			<!--
+				No need to be authoritative.  Make the suggestion.
 
-			<div class="step invisible" data-x="1500" data-y="1500" data-z="-1800" data-rotate-z="-90">
-				<h2>Final thoughts...</h2>
-				<ul>
-				<li>Social connections</li>
-				<h5> &nbsp; &nbsp; Simpler Social Integration using API Mashups<br/>
-					<em> &nbsp; &nbsp; Thursday 1:30 - 3:00 in Atlantic VI</em>
-				</h5>
-				<li>Web Sockets</li>
-				<li>Gamification</li>
+				I think that the web can support mobile
+					if you build for offline
+					if you design for mobile first
+
+				I think that the web can be fast enough
+					if you pre-fetch data
+					there isn't any interaction that you cannot make
+
+					GPU acceleration
+					multithreading
+					local database
+
+				If you believe that the web is not capable of awesome user experience
+					and you are intent on server-templated solutions - you are right
+
+				Moving stuff to the client allows you to only fetch the data that has changed and in the tree that is almost nothing
+
+				Mobile caches don't work, so we have to use AppCache and local storage
+
+				But if you embrace SPA you get:
+					90% reduction in network traffic (source lds.org)
+					30-50% reduction in database calls (source IMOS)
+					95% reduction in server load (source IMOS)
+			-->
+			<div id="architecture" class="step" data-x="3000" data-y="-50" data-z="0">
+				<h1>Architecture</h1>
+			</div>
+			<div class="step invisible" data-x="3050" data-y="80" data-z="-100" data-group="possible">
+				<h4>I think mobile-web...</h4>
+			</div>
+			<div class="step invisible" data-x="3100" data-y="160" data-z="-100" data-group="possible">
+				<h4>Can be beautiful</h4>
+			</div>
+			<div class="step invisible" data-x="3100" data-y="240" data-z="-100" data-group="possible">
+				<h4>Can be fast</h4>
+			</div>
+			<div class="step invisible" data-x="3100" data-y="320" data-z="-100" data-group="possible">
+				<h4>But has to be done differently</h4>
+			</div>
+			<div class="step invisible" data-x="3050" data-y="400" data-z="-100" data-group="possible">
+				<h4>Mobile first design</h4>
+			</div>
+			<div class="step invisible" data-x="3050" data-y="480" data-z="-100" data-group="possible">
+				<h4>Offline first (data &amp; code)</h4>
+			</div>
+			<div class="step invisible" data-x="3100" data-y="560" data-z="-100" data-group="possible">
+				<h4>Caching</h4>
+			</div>
+			<div class="step invisible" data-x="3100" data-y="640" data-z="-100" data-group="possible">
+				<h4>Pre-fetching</h4>
+			</div>
+			<div class="step invisible" data-x="3050" data-y="720" data-z="-100" data-group="possible">
+				<h4>Case Studies</h4>
+			</div>
+			<div class="step invisible" data-x="3100" data-y="800" data-z="-100" data-group="possible">
+				<h4>95% reduction in server load</h4>
+			</div>
+			<div class="step invisible" data-x="3100" data-y="880" data-z="-100" data-group="possible">
+				<h4>90% reduction in network traffic</h4>
+			</div>
+			<div class="step invisible" data-x="3100" data-y="960" data-z="-100" data-group="possible">
+				<h4>30-50% reduction in database load</h4>
 			</div>
 
 
- 			<div class="step invisible" data-x="-250" data-y="300" data-rotate-x="20" data-rotate-y="-50" data-rotate-z="70" data-scale="1">
-			    <br/><br/><br/><br/><br/>
-			    <h6>Thanks for coming!</h6>
-			    <h6>@tvalletta</h6>
-			    <h6>@judsonflamm</h6>
+			<!--
+				Dont bring your culture until you understand mine
+
+				TDD, Dependency Injection, Classes, interfaces and implementations are good things to know if you are writing Java.  But if you are writing JavaScript leave those things behind until you thoroughly understand [this] scope, prototypes, mixins, callbacks, closure, call() and apply().  
+				You cannot understand a culture that you do not embrace.  Once you get it, layer on your old culture as appropriate.
+			-->
+			<div class="step" data-x="4000" data-y="-50" data-z="0">
+				<h1>Culture</h1>
+			</div>
+			<div class="step invisible" data-x="4050" data-y="80" data-z="-100" data-group="innovation">
+				<h4>JavaScript vs. Java-Script</h4>
+			</div>
+			<div class="step invisible" data-x="4050" data-y="160" data-z="-100" data-group="innovation">
+				<h4>Ruby, Python, PHP, NoSQL, Erlang</h4>
+			</div>
+			<div class="step invisible" data-x="4050" data-y="240" data-z="-100" data-group="innovation">
+				<h4>Innovation vs. Enterprise</h4>
+			</div>
+			<div class="step invisible" data-x="4050" data-y="320" data-z="-100" data-group="innovation">
+				<h4>Gabriel Dayley Interview</h4>
+			</div>
+
+
+			<div class="step" data-x="5000" data-y="-50" data-z="0">
+				<h1>FamilySearch</h1>
+			</div>
+			<div class="step invisible" data-x="5050" data-y="80" data-z="-100" data-group="innovation">
+				<h4>Amazing Talent</h4>
+			</div>
+
+
+ 			<div class="step invisible center" data-x="2600" data-y="-650" data-z="3000" data-rotate-x="0" data-rotate-y="0" data-rotate-z="360" data-scale="6">
+			    <h4>tom@vallettas.com</h4>
+			    <h4>@tvalletta</h4>
 			</div>
 		</div>
     <script type="text/javascript" src="js/impress.js"></script>
@@ -712,6 +355,11 @@ for (var i = 0; i &lt; int32View.length; i++) {
     		setTimeout(function() {
 	    		var $evt = $(event.target);
 	    		
+	    		var stay = $evt.attr('data-stay');
+	    		if (stay) {
+	    			$evt.addClass('stay');
+	    		}
+
 	    		// Group Stuff
 	    		var group = $evt.attr('data-group');
 	    		if (group) {
